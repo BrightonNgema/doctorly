@@ -128,7 +128,7 @@ function App() {
                         onClear()
                       }}
                     >
-                      <p id={`item-${index}`}>{med!.item!.name}</p>
+                      <p>{med!.item!.name}</p>
                     </div>
                   ))
                 )}
@@ -138,6 +138,7 @@ function App() {
             <div className="search-res-counter text-center">
                 <p>{`About ${searchResults?.length} results`} </p>
             </div>}
+            {medication && 
             <div style={{marginTop:20,padding:"20px 20px 0px", backgroundColor:'#fff', maxWidth:300, borderRadius:5}}>
                 <h5 style={{margin:0}}>{medication?.pzn}</h5>
                 <p style={{marginTop:10}}>{medication?.name}</p>
@@ -161,7 +162,7 @@ function App() {
                       <p style={{margin:"0px 0px 20px", fontSize:14, fontWeight:600}}>{medication?.strengthValue}</p>
                     </div>
                 </div>
-            </div>
+            </div>}
           </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Fuse from 'fuse.js';
 import dummyData from './untils/dummyData.json'
-
+import {AiFillCloseCircle} from 'react-icons/ai'
 
 interface MedicationProps {
   amountUnit:string,
@@ -112,7 +112,7 @@ function App() {
                 placeholder="Search Medications"
                 onFocus={onFocus}
               />
-              <div className="clear-search-icon" onClick={onClear}/>
+               <AiFillCloseCircle  className="clear-search-icon" onClick={onClear}/>
             </div>
             <div className='search-res-container'>
                 {!!searchResults?.length && (
